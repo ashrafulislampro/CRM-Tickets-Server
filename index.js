@@ -3,13 +3,13 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const helmet = require("helmet");
+// const helmet = require("helmet");
 const morgan = require("morgan");
 const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 
 // API security
-app.use(helmet());
+// app.use(helmet());
 
 // set body bodyParser
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -36,29 +36,6 @@ const database = (module.exports = () => {
   }
 });
 database();
-
-// main().catch((err) => console.log(err));
-
-// async function main() {
-//   await mongoose.connect(process.env.MONGO_URL);
-//   console.log();
-// }
-// await mongoose.connect('mongodb://localhost/my_database');
-// mongoose.connect(process.env.MONGO_URL);
-
-// mongoose.connect("mongodb://localhost:27017/test");
-
-// if (process.env.NODE_ENV !== "production") {
-//   const mDB = mongoose.connection;
-//   mDB.on("open", () => {
-//     console.log("MongoDB is connected");
-//   });
-
-// } else {
-//   mDB.on("error", (error) => {
-//     console.log("errorasasas", error);
-//   });
-// }
 
 // logger
 app.use(morgan("tiny"));

@@ -1,0 +1,21 @@
+### User sign up endpoint 
+POST http://localhost:5000/v1/user/
+Content-Type: application/json
+
+{
+   "name": "Ashraful Islam",
+   "company": "Company name",
+   "address": "Shibpur, Narsingdi",
+   "phone": "013098999999",
+   "email": "example@gmail.com",
+   "password": "scrept123"
+}
+
+### User sign in endpoint
+POST http://localhost:5000/v1/user/login
+Content-Type: application/json
+
+{
+   "email": "example@gmail.com",
+   "password": "scrept123"
+}
