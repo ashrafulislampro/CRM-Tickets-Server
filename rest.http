@@ -7,7 +7,7 @@ Content-Type: application/json
    "company": "Company name",
    "address": "Shibpur, Narsingdi",
    "phone": "013098999999",
-   "email": "example@gmail.com",
+   "email": "example7@gmail.com",
    "password": "scrept123"
 }
 
@@ -16,6 +16,8 @@ POST http://localhost:5000/v1/user/login
 Content-Type: application/json
 
 {
-   "email": "example@gmail.com",
+   "email": "example7@gmail.com",
    "password": "scrept123"
 }
+//62be425ad68f31b9476408d0
+//

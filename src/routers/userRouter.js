@@ -45,7 +45,7 @@ router.post("/login", async (req, res) => {
 
   // get user with email from db
   const user = await getUserByEmail(email);
-
+  // console.log(user);
   // hash our password and compaire with the db one
   const passFromDB = user && user._id ? user.password : null;
 
@@ -59,8 +59,8 @@ router.post("/login", async (req, res) => {
     return res.json({ status: "error", message: "Invalid email or password!" });
   }
 
+  const refreshJWT = await createRefreshJWT(user.email, `${user._id}`);
   const accessJWT = await createAccessJWT(user.email, `${user._id}`);
-  const refreshJWT = await createRefreshJWT(user.email);
 
   res.json({
     status: "Success",
