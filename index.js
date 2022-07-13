@@ -54,10 +54,12 @@ app.use(morgan("tiny"));
 // Load routers
 const userRouter = require("./src/routers/userRouter");
 const ticketRouter = require("./src/routers/ticketRouter");
+const tokensRouter = require("./src/routers/tokensRouter");
 
 // Use Routers
 app.use("/v1/user", userRouter);
 app.use("/v1/ticket", ticketRouter);
+app.use("/v1/tokens", tokensRouter);
 
 // Error handler
 const handleError = require("./src/utils/errorHandler");

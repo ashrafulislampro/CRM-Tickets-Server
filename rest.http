@@ -7,7 +7,7 @@ Content-Type: application/json
    "company": "Company name",
    "address": "Shibpur, Narsingdi",
    "phone": "013098999999",
-   "email": "example7@gmail.com",
+   "email": "example9@gmail.com",
    "password": "scrept123"
 }
 
@@ -16,8 +16,18 @@ POST http://localhost:5000/v1/user/login
 Content-Type: application/json
 
 {
-   "email": "example7@gmail.com",
+   "email": "example9@gmail.com",
    "password": "scrept123"
 }
-//62be425ad68f31b9476408d0
-//
+
+
+### Get a user profile endpoint
+GET http://localhost:5000/v1/user
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGU5QGdtYWlsLmNvbSIsImlhdCI6MTY1NzY5Mjc4MCwiZXhwIjoxNjU3NjkyODQwfQ.M4XqA_Py7urOLwr5bTdWR67MSxBGmEJiQcQtptQ9MsY
+
+### Get a user refresh token
+GET http://localhost:5000/v1/tokens
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImV4YW1wbGU5QGdtYWlsLmNvbSIsImlhdCI6MTY1NzY5MjE3NCwiZXhwIjoxNjYwMjg0MTc0fQ.BVfkFX1INSvid3i-L0UI7rMu6JS3Yi95kbQliGM0178
+
+
+
